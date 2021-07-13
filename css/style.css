@@ -8,6 +8,10 @@ ul {
   padding: 0;
 }
 
+p {
+  margin: 0;
+}
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -33,6 +37,10 @@ ul {
   margin-right: 50px;
 }
 
+.log__block {
+  overflow: auto;
+}
+
 .calculator__input {
   display: block;
   padding: 20px 10px;
@@ -41,10 +49,6 @@ ul {
   background-color: black;
   border: 2px solid rgba(75, 74, 74, 0.685);
   border-radius: 5px;
-}
-
-.error {
-  color: red;
 }
 
 .calculator__elements-list {
@@ -72,4 +76,62 @@ ul {
 
 .calculator__elements-item:nth-child(n + 13) {
   margin-bottom: 0;
+}
+
+.operations__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.operations__item-circle {
+  width: 15px;
+  height: 15px;
+  border: 1px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.redBorder {
+  border-color: red;
+}
+
+.redCircle {
+  background-color: red;
+  border-color: red;
+}
+
+.operations__item-text {
+  font-size: 24px;
+}
+
+.operations__item-cross {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.operations__item-cross:before,
+.operations__item-cross:after {
+  position: absolute;
+  left: 7.5px;
+  content: "";
+  height: 15px;
+  width: 2px;
+  background-color: white;
+}
+
+.operations__item-cross.redCross:before,
+.operations__item-cross.redCross:after {
+  background-color: red;
+}
+
+.operations__item-cross:before {
+  transform: rotate(45deg);
+}
+
+.operations__item-cross:after {
+  transform: rotate(-45deg);
 }
